@@ -30,14 +30,16 @@ const Summary = () => {
     const totalPrice = items.reduce((total, item) => {
         return total + Number(item.price);
     }, 0);
-
+    let URL = '';
+    if (process.env.NODE_ENV !== 'production') {
+        URL = `http://localhost:3000/api/${process.env.NEXT_PUBLIC_API_TOEKN}/checkout`;
+    } else {
+        URL = `https://yuxuanize-ecomm.vercel.app/api/${process.env.NEXT_PUBLIC_API_TOEKN}/checkouts`;
+    }
     const onCheckout = async () => {
-        const response = await axios.post(
-            `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
-            {
-                productIds: items.map((item) => item.id),
-            },
-        );
+        const response = await axios.post(URL, {
+            productIds: items.map((item) => item.id),
+        });
 
         window.location = response.data.url;
     };
