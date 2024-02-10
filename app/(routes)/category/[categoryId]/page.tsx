@@ -11,7 +11,7 @@ import getColors from '@/actions/getColors';
 import Filter from './components/filter';
 import MobileFilters from './components/mobile-filters';
 
-export const revalidate = 0;
+export const dynamic = 'force-dynamic';
 
 interface CategoryPageProps {
     params: {

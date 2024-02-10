@@ -3,7 +3,7 @@ import getProducts from '@/actions/getProducts';
 import Billboard from '@/components/Billboard';
 import Container from '@/components/ui/Container';
 import ProductList from '@/components/ui/ProductList';
-export const revalidation = 0;
+export const dynamic = 'force-dynamic'
 export default async function Home({}: {}) {
     //> get the id of billboard from billboard page
     const billboard = await getBillboard(

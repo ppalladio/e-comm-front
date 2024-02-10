@@ -8,7 +8,7 @@ import useCart from '@/hooks/useCart';
 import Summary from './components/Summary';
 import CartItem from './components/CartItem';
 
-export const revalidate = 0;
+export const dynamic = 'force-dynamic'
 
 const CartPage = () => {
     const [isMounted, setIsMounted] = useState(false);
