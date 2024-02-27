@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic'
 export default async function Home({}: {}) {
     //> get the id of billboard from billboard page
     const billboard = await getBillboard(
-        '1a2a33bb-881f-424a-8ae4-7de79bedf33b',
+        '50f29c49-52dc-4659-8821-05e10e1d1268',
     );
     const products = await getProducts({ isFeatured: true });
     console.log(billboard);

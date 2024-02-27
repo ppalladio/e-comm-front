@@ -1,1 +1,3 @@
-config NEXT_PUBLIC_API_URL in .env, get the API from CRM settings page
+# Configs
+
+When changing the billboard for homepage, need to change the string in app/(routes)/page, get the id from backend and change it.
