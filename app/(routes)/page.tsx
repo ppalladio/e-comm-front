@@ -4,14 +4,14 @@ import Billboard from '@/components/Billboard';
 import Container from '@/components/ui/Container';
 import ProductList from '@/components/ui/ProductList';
 export const dynamic = 'force-dynamic'
-export default async function Home({}: {}) {
+export default async function Home() {
     //> get the id of billboard from billboard page
     const billboard = await getBillboard(
-        '50f29c49-52dc-4659-8821-05e10e1d1268',
+        'b1e786e4-677a-4ed0-a9ef-2b31cc1a6b52',
     );
     const products = await getProducts({ isFeatured: true });
-    console.log(billboard);
-	console.log(products)
+    // console.log(billboard);
+	// console.log(products)
     return (
         <Container>
             <section className="space-y-10 pb-10">
