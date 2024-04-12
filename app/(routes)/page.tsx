@@ -3,15 +3,15 @@ import getProducts from '@/actions/getProducts';
 import Billboard from '@/components/Billboard';
 import Container from '@/components/ui/Container';
 import ProductList from '@/components/ui/ProductList';
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-dynamic';
 export default async function Home() {
     //> get the id of billboard from billboard page
     const billboard = await getBillboard(
-        'b1e786e4-677a-4ed0-a9ef-2b31cc1a6b52',
+        '351cafd2-dc06-4d9d-9e16-e50706b447f6',
     );
     const products = await getProducts({ isFeatured: true });
     // console.log(billboard);
-	// console.log(products)
+    // console.log(products)
     return (
         <Container>
             <section className="space-y-10 pb-10">
