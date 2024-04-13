@@ -8,6 +8,7 @@ import Button from '@/components/ui/button';
 import Currency from '@/components/ui/Currency';
 import useCart from '@/hooks/useCart';
 import { toast } from 'react-hot-toast';
+const OFFICIAL_URL = process.env.API_URL;
 
 const Summary = () => {
     const searchParams = useSearchParams();
@@ -34,7 +35,7 @@ const Summary = () => {
     if (process.env.NODE_ENV !== 'production') {
         URL = `http://localhost:3000/api/${process.env.NEXT_PUBLIC_API_TOEKN}/checkout`;
     } else {
-        URL = `https://unddd.yuxuanize.com/api/${process.env.NEXT_PUBLIC_API_TOEKN}/checkout`;
+        URL = `${OFFICIAL_URL}/api/${process.env.NEXT_PUBLIC_API_TOEKN}/checkout`;
     }
     const onCheckout = async () => {
         const response = await axios.post(URL, {
