@@ -5,7 +5,7 @@ let URL = '';
 if (process.env.NODE_ENV !== 'production') {
     URL = `http://localhost:3000/api/${process.env.NEXT_PUBLIC_API_TOEKN}/categories`;
 } else {
-    URL = `https://yuxuanize-ecomm.vercel.app/api/${process.env.NEXT_PUBLIC_API_TOEKN}/categories`;
+    URL = `https://unddd.yuxuanize.com/api/${process.env.NEXT_PUBLIC_API_TOEKN}/categories`;
 }
 
 const getCategory = async (id: string): Promise<Category> => {

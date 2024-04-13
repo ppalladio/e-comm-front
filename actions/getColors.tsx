@@ -6,7 +6,7 @@ let URL = '';
 if (process.env.NODE_ENV !== 'production') {
     URL = `http://localhost:3000/api/${process.env.NEXT_PUBLIC_API_TOEKN}/colors`;
 } else {
-    URL = `https://yuxuanize-ecomm.vercel.app/api/${process.env.NEXT_PUBLIC_API_TOEKN}/colors`;
+    URL = `https://unddd.yuxuanize.com/api/${process.env.NEXT_PUBLIC_API_TOEKN}/colors`;
 }
 
 const getColors = async (): Promise<Color[]> => {

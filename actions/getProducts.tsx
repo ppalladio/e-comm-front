@@ -6,7 +6,7 @@ let URL = '';
 if (process.env.NODE_ENV !== 'production') {
     URL = `http://localhost:3000/api/${process.env.NEXT_PUBLIC_API_TOEKN}/products`;
 } else {
-    URL = `https://yuxuanize-ecomm.vercel.app/api/${process.env.NEXT_PUBLIC_API_TOEKN}/products`;
+    URL = `https://unddd.yuxuanize.com/api/${process.env.NEXT_PUBLIC_API_TOEKN}/products`;
 }interface Query {
     categoryId?: string;
     colorId?: string;
