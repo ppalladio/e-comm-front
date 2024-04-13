@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 
 import Container from '@/components/ui/Container';
 import useCart from '@/hooks/useCart';
@@ -42,7 +42,10 @@ const CartPage = () => {
                                 ))}
                             </ul>
                         </div>
+						<Suspense>
+
                         <Summary />
+						</Suspense>
                     </div>
                 </div>
             </Container>
