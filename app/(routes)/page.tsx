@@ -6,9 +6,7 @@ import ProductList from '@/components/ui/ProductList';
 export const dynamic = 'force-dynamic';
 export default async function Home() {
     //> get the id of billboard from billboard page
-    const billboard = await getBillboard(
-        '45617c7f-5067-4b03-9592-ebbcad4c9c97',
-    );
+    const billboard = await getBillboard(process.env.BILLBOARD_ID!);
     const products = await getProducts({ isFeatured: true });
     // console.log(billboard);
     // console.log(products)
